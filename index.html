@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+    <title>Ilayda's Temperature converter</title>
+</head>
+
+<body>
+    <nav>
+        <div class="header">
+            <h3>Ilayda's Temperature converter</h3>
+        </div>
+        <ul>
+            <a href="">
+                <li>Home</li>
+            </a>
+            <a href="">
+                <li>Temperatures</li>
+            </a>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <div class="conversion-options">
+            <button class="ftoc">Fahrenheit to Celsius</button>
+            <button class="ctof">Celsius to Fahrenheit</button>
+            <button class="ftok">Fahrenheit to Kelvin</button>
+            <button class="ctok">Celsius to Kelvin</button>
+        </div>
+
+        <div class="conversions">
+            <div class="common" id="farCel">
+                <h5>F TO C</h5>
+                <input id="fcinput" type="number" placeholder="Enter Fahrenheit">
+                <div class="farCel-output"></div>
+            </div>
+
+            <div class="common" id="celFar">
+                <h5>C TO F</h5>
+                <input id="cfinput" type="number" placeholder="Enter Celsius">
+                <div class="celFar-output"></div>
+            </div>
+
+            <div class="common" id="farKel">
+                <h5>F TO K</h5>
+                <input id="fkinput" type="number" placeholder="Enter Fahrenheit">
+                <div class="farKel-output"></div>
+            </div>
+
+            <div class="common" id="celKel">
+                <h5>C TO K</h5>
+                <input id="ckinput" type="number" placeholder="Enter Celsius">
+                <div class="celKel-output"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+/* NAVBAR */
+
+nav {
+    margin: auto;
+    max-width: 1170px;
+    display: table;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    display: table-cell;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: notable;
+    text-decoration: none;
+}
+
+nav li:hover {
+    color: grey;
+}
+
+/* CONTAINER */
+.container {
+    margin: auto;
+    max-width: 1170px;
+}
+
+.conversion-options {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.conversion-options button {
+    height: 2rem;
+    margin: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.conversions {
+    margin-top: 2rem;
+}
+
+input {
+    border: none;
+    outline: none
+    ;
+}
+
+#farCel  {
+    display: flex;
+    justify-content: space-around;
+}
+
+.common  {
+    display: flex;
+    justify-content: space-around;
+}
