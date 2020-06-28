@@ -1,89 +1,98 @@
 init();
 var ftoc, ctof, ftok, ctok, farCel, celFar, farKel, celKel, userInput;
+/* FAHRENHEIT TO CELSIUS */
+
+function fc() {
+    var fcInput = document.getElementById('fcinput').value;
+
+    var fcInput = fcInput.toString();
+    var cel = (fcInput - 32) * 5 / 9;
+
+    cel = cel.toString();
+
+    ftocOutput = document.querySelector('.farCel-output');
+    ftocOutput.textContent = (Math.trunc(cel)) + `℃`;
+    ftocOutput = ftocOutput.toString();
+
+    return cel;
+};
 
 ftoc.addEventListener('click', function () {
     farCel.style.display = 'flex';
+    document.querySelector('.conversion-facts-far').style.display = 'block';
+    document.querySelector('.conversion-facts-cel').style.display = 'none';
+    document.querySelector('.conversion-facts-kel').style.display = 'none';
 
     celFar.style.display = 'none';
     farKel.style.display = 'none';
     celKel.style.display = 'none';
-
-    var fcInput = document.getElementById('fcinput').value;
-
-    function fc() {
-        var cel = (fcInput - 32) * 5 / 9;
-        return cel;
-    };
-
-    var celsius = fc();
-
-    var ftocOutput = document.querySelector('.farCel-output');
-    ftocOutput.textContent = parseInt(Math.trunc(celsius)) + `℃`;
-
-
 });
+
+/* CELSIUS TO FAHRENHEIT */
+function cf() {
+
+    var cfInput = document.getElementById('cfinput').value;
+    var far = cfInput * 9 / 5 + 32;
+    var ctofOutput = document.querySelector('.celFar-output');
+    ctofOutput.textContent = (Math.trunc(far)) + `℉`;
+    return far;
+};
 
 ctof.addEventListener('click', function () {
     celFar.style.display = 'flex';
 
+    document.querySelector('.conversion-facts-far').style.display = 'none';
+    document.querySelector('.conversion-facts-cel').style.display = 'block';
+    document.querySelector('.conversion-facts-kel').style.display = 'none';
+
     farCel.style.display = 'none';
     farKel.style.display = 'none';
     celKel.style.display = 'none';
-
-    var cfInput = document.getElementById('cfinput').value;
-
-    function cf() {
-        var far = cfInput * 9 / 5 + 32;
-        return far;
-    };
-
-    var fahrenheit = cf();
-
-    var ctofOutput = document.querySelector('.celFar-output');
-    ctofOutput.textContent = parseInt(Math.trunc(fahrenheit)) + `℉`
 });
+
+/* FAHRENHEIT TO KELVIN */
+function fk() {
+    var fkInput = document.getElementById('fkinput').value;
+    var kelvin = (fkInput - 32) * 5 / 9 + 273.15;
+    var ftokOutput = document.querySelector('.farKel-output');
+    ftokOutput.textContent = parseInt(Math.trunc(kelvin)) + `°K`;
+    return kelvin;
+};
 
 ftok.addEventListener('click', function () {
     farKel.style.display = 'flex';
 
+    document.querySelector('.conversion-facts-far').style.display = 'none';
+    document.querySelector('.conversion-facts-cel').style.display = 'none';
+    document.querySelector('.conversion-facts-kel').style.display = 'block';
+
     farCel.style.display = 'none';
     celFar.style.display = 'none';
     celKel.style.display = 'none';
-
-    var fkInput = document.getElementById('fkinput').value;
-
-    function fk() {
-        var kelvin = (fkInput - 32) * 5/9 + 273.15;
-        return kelvin;
-    };
-
-    var kelvinOut = fk();
-
-    var ftokOutput = document.querySelector('.farKel-output');
-    ftokOutput.textContent = parseInt(Math.trunc(kelvinOut)) + `°K`;
-
 });
+
+/* CELSIUS TO KELVIN */
+function ck() {
+    var ckInput = document.getElementById('ckinput').value;
+    var kel = ckInput * 5 / 9 + 273.15;
+    var ctokOutput = document.querySelector('.celKel-output');
+    ctokOutput.textContent = parseInt(Math.trunc(kel)) + `°K`;
+    return kel;
+};
 
 ctok.addEventListener('click', function () {
     celKel.style.display = 'flex';
 
+    document.querySelector('.conversion-facts-far').style.display = 'none';
+    document.querySelector('.conversion-facts-cel').style.display = 'none';
+    document.querySelector('.conversion-facts-kel').style.display = 'block';
+
     farCel.style.display = 'none';
     celFar.style.display = 'none';
     farKel.style.display = 'none';
-
-    var ckInput = document.getElementById('ckinput').value;
-
-    function ck() {
-        var kel = ckInput * 5/9 + 273.15;
-        return kel;
-    };
-
-    var kelOut = ck();
-
-    var ctokOutput = document.querySelector('.celKel-output');
-    ctokOutput.textContent = parseInt(Math.trunc(kelOut)) + `°K`;
 });
 
+/* INIT */
 function init() {
     ftoc = document.querySelector('.ftoc');
     ctof = document.querySelector('.ctof');
@@ -99,4 +108,9 @@ function init() {
     celFar.style.display = 'none';
     farKel.style.display = 'none';
     celKel.style.display = 'none';
+
+    // facts 
+    document.querySelector('.conversion-facts-far').style.display = 'none';
+    document.querySelector('.conversion-facts-cel').style.display = 'none';
+    document.querySelector('.conversion-facts-kel').style.display = 'none';
 };

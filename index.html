@@ -6,14 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
-    <title>Ilayda's Temperature converter</title>
+    <title>Temperature converter</title>
 </head>
 
 <body>
     <nav>
-        <div class="header">
-            <h3>Ilayda's Temperature converter</h3>
-        </div>
         <ul>
             <a href="">
                 <li>Home</li>
@@ -22,6 +19,7 @@
                 <li>Temperatures</li>
             </a>
         </ul>
+        <p>ILAYDA'S CONVERTER</p>
     </nav>
 
     <div class="container">
@@ -36,26 +34,43 @@
         <div class="conversions">
             <div class="common" id="farCel">
                 <h5>F TO C</h5>
-                <input id="fcinput" type="number" placeholder="Enter Fahrenheit">
+                <input id="fcinput" placeholder="Enter Fahrenheit" oninput="fc()">
                 <div class="farCel-output"></div>
+            </div>
+            <div class="conversion-facts-far">
+                In the Fahrenheit scale, water boils at 212 degrees. Fahrenheit is a temperature scale that bases the
+                boiling point of water at 212 and the freezing point at 32. It was developed by Daniel Gabriel
+                Fahrenheit, a German-born scientist who lived and worked primarily in the Netherlands.
             </div>
 
             <div class="common" id="celFar">
                 <h5>C TO F</h5>
-                <input id="cfinput" type="number" placeholder="Enter Celsius">
+                <input id="cfinput" type="number" placeholder="Enter Celsius" oninput="cf()">
                 <div class="celFar-output"></div>
+            </div>
+            <div class="conversion-facts-cel">
+                Celsius is a measurement of temperature in which 0 degrees represents the freezing point of water, and
+                100 degrees represents water's boiling point at the standard atmosphere, which is the mean barometric
+                pressure at the mean sea level. This temperature scale was developed by Swedish astronomer Andres
+                Celsius in 1742.
             </div>
 
             <div class="common" id="farKel">
                 <h5>F TO K</h5>
-                <input id="fkinput" type="number" placeholder="Enter Fahrenheit">
+                <input id="fkinput" type="number" placeholder="Enter Fahrenheit" oninput="fk()">
                 <div class="farKel-output"></div>
             </div>
 
             <div class="common" id="celKel">
                 <h5>C TO K</h5>
-                <input id="ckinput" type="number" placeholder="Enter Celsius">
+                <input id="ckinput" type="number" placeholder="Enter Celsius" oninput="ck()">
                 <div class="celKel-output"></div>
+            </div>
+            <div class="conversion-facts-kel">
+                There are 100 degrees between the temperate at which water freezes at (273.16 K) and boils (373.16 K).
+                Each unit on this scale, called a Kelvin rather than a degree, is equal to a degree on the Celsius
+                scale. For this reason, just the K, not the degree symbol, is used when reporting temperatures in
+                Kelvin.
             </div>
         </div>
 
