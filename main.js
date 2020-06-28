@@ -18,7 +18,8 @@ ftoc.addEventListener('click', function () {
     var celsius = fc();
 
     var ftocOutput = document.querySelector('.farCel-output');
-    ftocOutput.textContent = parseInt(Math.trunc(celsius));
+    ftocOutput.textContent = parseInt(Math.trunc(celsius)) + `℃`;
+
 
 });
 
@@ -39,7 +40,7 @@ ctof.addEventListener('click', function () {
     var fahrenheit = cf();
 
     var ctofOutput = document.querySelector('.celFar-output');
-    ctofOutput.textContent = parseInt(Math.trunc(fahrenheit));
+    ctofOutput.textContent = parseInt(Math.trunc(fahrenheit)) + `℉`
 });
 
 ftok.addEventListener('click', function () {
@@ -52,14 +53,14 @@ ftok.addEventListener('click', function () {
     var fkInput = document.getElementById('fkinput').value;
 
     function fk() {
-        var kelvin = fkInput + 459.67 * 5 / 9;
+        var kelvin = (fkInput - 32) * 5/9 + 273.15;
         return kelvin;
     };
 
     var kelvinOut = fk();
 
     var ftokOutput = document.querySelector('.farKel-output');
-    ftokOutput.textContent = parseInt(Math.trunc(kelvinOut));
+    ftokOutput.textContent = parseInt(Math.trunc(kelvinOut)) + `°K`;
 
 });
 
@@ -73,14 +74,14 @@ ctok.addEventListener('click', function () {
     var ckInput = document.getElementById('ckinput').value;
 
     function ck() {
-        var kel = ckInput + 273.15;
+        var kel = ckInput * 5/9 + 273.15;
         return kel;
-    }
+    };
 
     var kelOut = ck();
 
     var ctokOutput = document.querySelector('.celKel-output');
-    ctokOutput.textContent = parseInt(Math.trunc(kelOut));
+    ctokOutput.textContent = parseInt(Math.trunc(kelOut)) + `°K`;
 });
 
 function init() {
